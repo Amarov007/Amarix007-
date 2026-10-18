@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Test</title></head>
+<body>
+<h1>اختبار الاتصال بـ Supabase</h1>
+<button onclick="test()">اضغط للاختبار</button>
+<script>
+function test() {
+  fetch('https://pvuobngrybygohendwaz.supabase.co/rest/v1/', {
+    headers: {
+      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB2dW9ibmdyeWJ5Z29oZW5kd2F6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIzMTI0ODIsImV4cCI6MjEwNzg4ODQ4Mn0.enSKw1_Wt58iK8-Y0eaHMWtBGQ7HyYXP_JEwYLsSfpU'
+    }
+  })
+  .then(res => alert('نجح الاتصال! كود الحالة: ' + res.status))
+  .catch(err => alert('فشل الاتصال! الخطأ: ' + err.message));
+}
+</script>
+</body>
+</html>
